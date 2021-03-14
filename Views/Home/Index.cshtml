@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calculation Engine Test Client</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+            function show() {
+                var input = $('#input').val();
+                input = input.replace('/', 'd');
+                input = input.replace('*', 'm');
+                input = input.replace('+', 'a');
+                input = input.replace('-', 's');
+                $.getJSON("api/Calculation/" + input,
+                    function (Data) {
+                        $('#result').text(Data);
+                    })
+                .fail(
+                    function (jqXHR, textStatus, err) {
+                        $('#result').text('Error: ' + err);
+                    });
+            }
+    </script>
+</head>
+<body id="body">
+    <div class="main-content">
+        <div>
+            <h1>Calculation Engine Test Client</h1>
+        </div>
+        <div>
+            <label for="input">Expression:</label>
+            <input type="text" id="input" size="50" />
+            <input type="button" value="Calculate" onclick="show();" />
+
+            <p></p><h2 id="result" /></p>
+        </div>
+    </div>
+</body>
+</html>
