@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\IK\\Desktop\\CalculationEngine\\CalculationEngine.csproj": {}
+    "C:\\Users\\IK\\Desktop\\vs\\CalculationEngine\\CalculationEngine.csproj": {}
   },
   "projects": {
-    "C:\\Users\\IK\\Desktop\\CalculationEngine\\CalculationEngine.csproj": {
+    "C:\\Users\\IK\\Desktop\\vs\\CalculationEngine\\CalculationEngine.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\IK\\Desktop\\CalculationEngine\\CalculationEngine.csproj",
+        "projectUniqueName": "C:\\Users\\IK\\Desktop\\vs\\CalculationEngine\\CalculationEngine.csproj",
         "projectName": "CalculationEngine",
-        "projectPath": "C:\\Users\\IK\\Desktop\\CalculationEngine\\CalculationEngine.csproj",
+        "projectPath": "C:\\Users\\IK\\Desktop\\vs\\CalculationEngine\\CalculationEngine.csproj",
         "packagesPath": "C:\\Users\\IK\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\IK\\Desktop\\CalculationEngine\\obj\\",
+        "outputPath": "C:\\Users\\IK\\Desktop\\vs\\CalculationEngine\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
