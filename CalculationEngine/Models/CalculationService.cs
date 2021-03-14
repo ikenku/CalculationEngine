@@ -15,9 +15,17 @@ namespace CalculationEngine.Models
                 {
                     if (!string.IsNullOrEmpty(calc.NumbersAndOperatorsList[i]) && !string.IsNullOrEmpty(calc.NumbersAndOperatorsList[i + 1]) && !string.IsNullOrEmpty(calc.NumbersAndOperatorsList[i + 2]))
                     {
-                        calc.Operator = Convert.ToChar(calc.NumbersAndOperatorsList[i + 1]);
+                        try
+                        {
+                            calc.Operator = Convert.ToChar(calc.NumbersAndOperatorsList[i + 1]);
+                        }
+                        catch(FormatException e)
+                        {
+                            Console.WriteLine("Input expression is not valid - The operator is not in the required format of 'd', 'm', 'a', or 's'.");
+                        }
+
                         if (!operators.Contains(calc.Operator))
-                            throw new ArithmeticException("Input expression is not valid - The operator is not in the required format of 'd', 'm', 'a', or 's'");
+                            throw new ArithmeticException("Input expression is not valid - The operator is not in the required format of 'd', 'm', 'a', or 's'.");
                         if (op == calc.Operator)
                         {
                             calc.LeftOperand = Convert.ToDouble(calc.NumbersAndOperatorsList[i]);
@@ -46,7 +54,7 @@ namespace CalculationEngine.Models
                         }
                     }
                     else
-                        throw new ArithmeticException("Input expression is not valid - The operand is not valid");
+                        throw new ArithmeticException("Input expression is not valid - The operand is not valid.");
                 }
             }
             if (calc.NumbersAndOperatorsList.Count > 1)
