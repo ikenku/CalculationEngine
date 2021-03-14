@@ -20,3 +20,5 @@ Examples of acceptable input expressions are as follows:
 6+1/3*30-2
 
 6a1d3m30s2
+
+Enter the expression to evaluate in the text box provided and press the button to calculate.
